@@ -2,10 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 // import Home from './../view/hello.vue'
 // import About from './../view/about.vue'
-// import layout from './../view/layout.vue'
-// import Contaniner from './../view/container.vue'
-// import checkbox from "./../view/checkbox.vue"
-// import radio from "./../view/radio.vue"
 
 import {menu} from '@/config/menu-config'
 
@@ -16,17 +12,22 @@ menu.forEach((item) => {
     routers.push({
       path: `/${row.componentName}`,
       name: row.componentName,
-      component: () => import(`@/view/${row.componentName}`)
+      component: () => import(`./../view/${row.componentName}`)
     })
   })
 })
 
 export default new Router({ routers })
 
+// import layout from './../view/BasicLayout'
+// import Contaniner from './../view/BasicContainer'
+// import checkbox from "./../view/FormCheckbox"
+// import radio from "./../view/FormRadio"
+
 // export default new Router({
 //   routes: [
 //     {
-//       path: '/BasicLyout',
+//       path: '/BasicLayout',
 //       name: 'layout',
 //       component: layout
 //     },
