@@ -2,6 +2,7 @@ export const menu = [
   {
     name: '基础',
     id: 'basic',
+    iconClass: 'el-icon-menu',
     sub: [
       {
         name: 'Layout 布局',
@@ -14,6 +15,7 @@ export const menu = [
   {
     name: 'Form',
     id: 'form',
+    iconClass: 'el-icon-film',
     sub: [
       {
         name: 'Checkbox',
