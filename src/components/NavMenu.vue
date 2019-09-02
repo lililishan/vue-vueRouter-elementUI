@@ -14,7 +14,7 @@
                 >
                 <el-submenu  v-for="(item) in menu" :index = item.id  :key="item.id">
                     <template slot="title">
-                        <i class="el-icon-location"></i>
+                        <i :class="item.iconClass"></i>
                         <span>{{item.name}}</span>
                     </template>
                     <el-menu-item-group v-for="row in item.sub" :key="row.componentName">
@@ -44,8 +44,11 @@ import {menu} from "@/config/menu-config"
   }
 </script>
 <style lang="less">
-.el-submenu__title {
+.el-menu {
+  border-right: solid 1px rgb(84, 92, 100);
+  .el-submenu__title {
     text-align: left;
+    }
 }
     
 </style>
